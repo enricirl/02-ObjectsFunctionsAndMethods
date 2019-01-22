@@ -7,7 +7,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 """  # Done
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -25,14 +25,16 @@ def main():
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
     """
+    office('orange',4)
 
+    office('blue',6)
 
 ###############################################################################
 # Done
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
@@ -43,7 +45,7 @@ def hypotenuse(side1,side2):
     return length
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -65,12 +67,20 @@ def hypotenuse(side1,side2):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+def office(color,thickness):
+    window=rg.TurtleWindow()
+    jim=rg.SimpleTurtle('turtle')
+    jim.pen=rg.Pen('green',thickness)
+    pam=rg.SimpleTurtle('turtle')
+    pam.pen=rg.Pen(color,5)
 
-
+    jim.forward(100)
+    pam.backward(100)
+    window.close_on_mouse_click()
 ###############################################################################
 # TODO: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
